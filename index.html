@@ -243,6 +243,12 @@
             margin: 0 auto;
         }
 
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
         .back-button {
             display: inline-flex;
             align-items: center;
@@ -258,7 +264,6 @@
             cursor: pointer;
             border-radius: 30px;
             transition: all 0.3s ease;
-            margin-bottom: 3rem;
         }
 
         .back-button:hover {
@@ -344,9 +349,10 @@
 
         .nominees-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
             gap: 2.5rem;
             margin-top: 2rem;
+            justify-content: center;
             justify-items: center;
         }
 
@@ -601,7 +607,9 @@
     <!-- Nominees Section -->
     <section class="nominees-section" id="nominees">
         <div class="container">
-            <button class="back-button" onclick="showHero()">← Volver al inicio</button>
+            <div class="button-container">
+                <button class="back-button" onclick="showHero()">← Volver al inicio</button>
+            </div>
             
             <!-- CATEGORÍA 1: Mejor Actor de Voz -->
             <div class="category" data-category="0">
